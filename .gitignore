@@ -1,0 +1,9 @@
+.venv/
+venv/
+.gradio/
+__pycache__/
+*.pyc
+.env
+uploads/
+vector_db/
+models/

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+llama-cpp-python
+python-multipart
+pydantic
+requests
+python-dotenv
+pypdf
+pymupdf
+openpyxl
+xlrd
+pandas

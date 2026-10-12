@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!-- Define the chatbot page structure, upload controls, and message areas. -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>COMM_IT AI</title>
+
+<!-- CSS -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
+
+<link
+    rel="stylesheet"
+    href="/css/style.css?v=chat-input-pause-3"
+>
+
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+
+    <div class="logo">
+        COMM_IT AI
+    </div>
+
+    <div class="menu"></div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+
+            <button
+                id="newChatButton"
+                class="new-chat-btn"
+                type="button"
+            >
+                <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                New chat
+            </button>
+
+        </div>
+
+        <div class="sidebar-title">
+            Conversations
+        </div>
+
+        <div id="conversation-list"></div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- CHAT AREA -->
+        <div id="chat-window">
+
+            <div class="message ai-message-row">
+
+                <div class="message-header">
+                    <span class="avatar-badge ai-avatar">AI</span>
+                </div>
+
+                <div class="ai-message">
+
+                    <h3>
+                        Welcome to COMM_IT AI
+                    </h3>
+
+                    <p>
+                        Upload files or ask questions .
+                    </p>
+
+                    <br>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INPUT AREA -->
+        <div class="input-area">
+
+            <div class="file-controls">
+
+                <label
+                    class="file-upload-button"
+                    for="fileUpload"
+                    title="Choose files"
+                    aria-label="Choose files"
+                >
+                    📎
+                </label>
+
+                <div
+                    id="selected-files"
+                    class="selected-files"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+            <input
+                type="file"
+                id="fileUpload"
+                multiple
+                accept=".pdf,.txt,.csv,.xlsx,.xls,.xlsm"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Ask anything about your files, code, SQL, Maximo, Java, Python..."
+            ></textarea>
+
+            <button
+                id="pauseStreamButton"
+                class="pause-stream-btn"
+                type="button"
+                aria-label="Pause response"
+                title="Pause response"
+                hidden
+            >
+                <i class="fa-solid fa-pause" aria-hidden="true"></i>
+            </button>
+
+            <button
+                id="sendButton"
+                onclick="sendMessage()"
+            >
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MARKDOWN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- SYNTAX HIGHLIGHT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- APP -->
+<script src="/js/app.js?v=maximo-download-tools-7"></script>
+
+
+</body>
+
+</html>
